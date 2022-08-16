@@ -1,13 +1,9 @@
 import cv2
-# from outcome import capture
 
 capture = cv2.VideoCapture(0)
 capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 faceCascade = cv2.CascadeClassifier('./haarcascades/haarcascade_frontalface_default.xml')
-
-# faceCascade = cv2.CascadeClassifier('./haarcascades/haarcascade_eye_tree_eyeglasses.xml')
-
 
 while True:
     _, frame = capture.read()
